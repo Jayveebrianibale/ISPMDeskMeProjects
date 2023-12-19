@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+
+}
+body {
+    background-color: #E9F1FF;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px 100px;
+    background: #1E4B74;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: 900    ;   
+}
+.navbar{
+   margin-left: 620px;
+}
+.navbar a {
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 40px;
+
+}
+
+.container {
+    display: flex;
+    height: 100vh; 
+}
+
+.picture {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.picture img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.login {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    width: 100%;
+    border: #1E4B74;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1E4B74;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.forgot-password {
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+.error-message {
+    color: red;
+    margin-top: -8px;
+    margin-bottom: 16px;
+}

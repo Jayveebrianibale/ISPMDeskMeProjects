@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .booking-item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        .booking-item span {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+    <title>Desk Booking List</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Desk Booking List</h2>
+        <ul class="booking-list" id="bookingList"></ul>
+    </div>
+
+    <script>
+        const bookingList = document.getElementById('bookingList');
+
+        function bookDesk() {
+            const floorSelect = document.getElementById('floor');
+            const deskSelect = document.getElementById('desk');
+            const nameInput = document.getElementById('name');
+
+            const selectedFloor = floorSelect.value;
+            const selectedDesk = deskSelect.value;
+            const userName = nameInput.value;
+
+            if (selectedDesk && userName) {
+                const listItem = document.createElement('li');
+                listItem.classList.add('booking-item');
+                listItem.innerHTML = `
+                    <span><strong>Floor:</strong> ${selectedFloor}</span>
+                    <span><strong>Desk:</strong> ${selectedDesk}</span>
+                    <span><strong>Name:</strong> ${userName}</span>
+                `;
+                bookingList.appendChild(listItem);
+
+                // Clear form inputs after booking
+                floorSelect.value = '';
+                deskSelect.innerHTML = '<option value="" disabled selected>Select Desk</option>';
+                nameInput.value = '';
+            } else {
+                alert('Please select a desk and enter your name.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="DeskList.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Desklist</title>
+</head>
+<body>
+    <header class="header">
+      <a href="" class="logo">Deskme</a>
+
+      <nav class="navbar">
+        <a href="http://">Hot Desk Booking System</a>
+      </nav>
+      <div>
+        <i class="fa-solid fa-bell"></i>
+      </div>
+    </header>
+
+
+    <div class="container">
+        <h2 id="Dlist">Desk List</h2>
+        <ul class="desk-list" id="deskList">
+            <!-- Desk items will be populated dynamically using JavaScript -->
+        </ul>
+    </div>
+
+    <script>
+        const deskList = document.getElementById('deskList');
+
+        const desksData = [
+            { floor: 1, desk: 'Desk 1A', name: 'John Carlo' },
+            { floor: 2, desk: 'Desk 2B', name: 'Jayvee Brian' },
+            { floor: 3, desk: 'Desk 3C', name: 'Jireh' },
+            { floor: 4, desk: 'Desk 4D', name: 'Johnmark' },
+            { floor: 5, desk: 'Desk 5E', name: 'Peter' },
+            // Add more desks as needed
+        ];
+
+        function renderDeskList() {
+            deskList.innerHTML = '';
+            desksData.forEach(data => {
+                const deskItem = document.createElement('li');
+                deskItem.className = 'desk-item';
+
+                const deskInfo = document.createElement('p');
+                deskInfo.textContent = `Floor ${data.floor}, ${data.desk}, Booked by ${data.name}`;
+
+                const actions = document.createElement('div');
+                actions.className = 'actions';
+
+                const acceptButton = document.createElement('button');
+                acceptButton.className = 'accept';
+                acceptButton.textContent = 'Accept';
+                acceptButton.addEventListener('click', () => handleAction(data, 'accepted'));
+
+                const declineButton = document.createElement('button');
+                declineButton.className = 'decline';
+                declineButton.textContent = 'Decline';
+                declineButton.addEventListener('click', () => handleAction(data, 'declined'));
+
+                actions.appendChild(acceptButton);
+                actions.appendChild(declineButton);
+
+                deskItem.appendChild(deskInfo);
+                deskItem.appendChild(actions);
+
+                deskList.appendChild(deskItem);
+            });
+        }
+
+        function handleAction(data, action) {
+            // Additional logic for handling accept/decline action
+            console.log(`Desk ${data.desk} on Floor ${data.floor} ${action} by ${data.name}.`);
+            // You can update the UI or make an API call to handle the action.
+        }
+
+        renderDeskList();
+    </script>
+   
+</body>
+</html>

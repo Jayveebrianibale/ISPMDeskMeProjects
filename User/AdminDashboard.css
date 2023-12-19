@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px 100px;
+    background: #1E4B74;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;   
+}
+
+.navbar a {
+    font-size: 30px;
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+    text-align: center;
+}
+  
+.fa-solid {
+    padding: 8px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 2px;
+    text-decoration: none;
+    font-size: 35px;
+    
+}
+.fa-solid.fa-gear {
+    margin-top: 200px;
+}
+.sidebar {
+position: fixed;
+left: 0;
+width: 100px;
+height: 700px;
+background: #1E4B74;
+margin-top: 100px;
+border-top-right-radius: 20px;
+}
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    text-decoration: none;
+   
+}
+.Office {
+    width: 800px;
+   border: 3px solid;
+   border-width: 20px;
+   border-color: #1E4B74;
+   border-radius: 10px;
+}
+
+.Office-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 130px;
+    border: 2px #E9F1FF;
+
+}
+#click {
+    margin-top: 150px;
+}
+.custom-button {
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1E4B74;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 25px;
+}
+.custom-button:hover {
+    background-color: #1E4B74;
+}
+
+.sidebar-right {
+    width: 250px;
+    height: 570px;
+    background: #1E4B74;
+    border-top-left-radius: 20px;
+    float: right;
+    
+}
+#lvcc-image {
+    width: 100px;
+    height: 100px;
+    margin-top: 80px;
+}
+.fa-regular.fa-pen-to-square {
+    color: black;
+    font-weight: 600;
+    align-self: flex-start;
+}
+.fa-solid.fa-bell {
+    font-size: 30px;
+}
+.fa-regular.fa-pen-to-square {
+    align-self: flex-end;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    background-color: #E9F1FF;
+}
+.image-container{
+    text-align: center; 
+}
+.date-picker-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;   
+    font-weight: 500;  
+    margin-top: 20px; 
+}
+#datepicker {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+#datepicker-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: auto;
+}
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: white;
+}
+#Desklist {
+    color: white;
+    text-align: center;
+    padding: 0%;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    color: white;
+
+}
+
+tr:hover {
+    background-color:#1E4B74 ;
+}
+
+.View {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px;
+
+}
+#view{
+    color: white;
+    text-decoration: none;
+    
+    
+}
