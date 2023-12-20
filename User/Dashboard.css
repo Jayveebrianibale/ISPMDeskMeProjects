@@ -8,7 +8,6 @@
 
 
 }
-
 .header {
     position: fixed;
     top: 0;
@@ -35,6 +34,10 @@
     text-decoration: none;
     text-align: center;
 }
+.Desklogo {
+    width: 50px;
+    height: 50px;
+}
   
 .fa-solid {
     padding: 8px;
@@ -48,7 +51,7 @@
     
 }
 .fa-solid.fa-gear {
-    margin-top: 300px;
+    margin-top: 335px;
 }
 .sidebar {
 position: fixed;
@@ -77,6 +80,7 @@ border-top-right-radius: 20px;
    border-width: 20px;
    border-color: #1E4B74;
    border-radius: 10px;
+   margin-top: 20px;
 }
 
 .Office-map {
@@ -109,7 +113,7 @@ border-top-right-radius: 20px;
 
 .sidebar-right {
     width: 250px;
-    height: 535px;
+    height: 540px;
     background: #1E4B74;
     border-top-left-radius: 20px;
     float: right;
@@ -118,7 +122,7 @@ border-top-right-radius: 20px;
 #lvcc-image {
     width: 100px;
     height: 100px;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 .fa-regular.fa-pen-to-square {
     align-self: flex-end;

@@ -9,11 +9,11 @@
 </head>
 <body>
     <header class="header">
-      <a href="" class="logo">Deskme</a>
+        <img class="Desklogo" src="../images/DeskBg.png" alt="">
 
       <nav class="navbar">
         <a href="http://">Home</a>
-        <a href="http://">Events</a>
+        <a href="http://">Services</a>
         <a href="http://">People</a>
       </nav>
     </header>
@@ -22,25 +22,28 @@
       <div class="picture">
           <img src="../images/Logo.png" alt="Side Picture">
       </div>
-      <div class="login">
-          <h1>Login</h1>
-          <form>
-              <label for="email">Email:</label>
-              <input type="text" id="email" name="email" required>
-              <div class="error-message" id="emailError"></div>
 
-              <label for="password">Password:</label>
-              <input type="password" id="password" name="password" required>
-              <div class="error-message" id="passwordError"></div>
+        <div class="login">
+            <form>
+                <h1 id="imao">Login</h1>
+                <label for="email">Email:</label>
+                <input placeholder="@Loremepsom.com" type="text" id="email" name="email" required>
+                <div class="error-message" id="emailError"></div>
 
-              <button onclick="login()" type="button">Login</button>
-              <p id="loginMessage"></p>
-          </form>
-          <div class="forgot-password">
-            <a>Forgot Password?</a>
-          </div>
-      </div>
-  </div>
+                <label for="password">Password:</label>
+                <input placeholder="Password" type="password" id="password" name="password" required>
+                <div class="error-message" id="passwordError"></div>
+
+                <button onclick="login()" id="login-size" type="button">Login</button>
+                <p id="loginMessage"></p>
+
+                <div class="forgot-password">
+                    <a>Forgot Password?</a>
+                  </div>
+            </form>
+            
+        </div>
+    </div>
   <script>
     function login() {
         // Reset error messages
@@ -49,23 +52,15 @@
 
         var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
-
-        if (email === "") {
-            document.getElementById("emailError").innerHTML = "Email is required.";
-        }
-
-        if (password === "") {
-            document.getElementById("passwordError").innerHTML = "Password is required.";
-        }
-
-        if (email !== "user@example.com" || password !== "password123") {
-            document.getElementById("emailError").innerHTML = "Email is required.";
-        }
-
         if (email === "jayveebriani@gmail.com" && password === "user123") {
           
-            window.location.href = "Dashboard.html";
-        } else {
+          window.location.href = "Dashboard.html";
+      }
+        else if (email !== "user@example.com" || password !== "password123"){
+            document.getElementById("emailError").innerHTML = "Email is required.";
+            document.getElementById("passwordError").innerHTML = "Password is required.";
+        }
+        else {
             alert("Invalid email or password. Please try again.");
             
         }
